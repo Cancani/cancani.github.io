@@ -1,2 +1,0 @@
-# cancani.github.io
-swagalicious
