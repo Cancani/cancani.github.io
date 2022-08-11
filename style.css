@@ -15,7 +15,7 @@ body {
 	margin-top; 100px;
 }
 
-#footer {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
