@@ -1,0 +1,36 @@
+body {
+	width: 960px;
+	margin: 0 auto;
+	font-family: monospace;
+	text-align: center;
+	background-image: url("yamei.gif");
+	background-repeat: repeat-5;
+	background-color: black;
+}
+  
+#embeds {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.text {
+	font-size: 10px;
+	color: #cccccc;
+	line-break: anywhere;
+	word-break: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+	font-weight: 100;
+}
+
+.link {
+	color: #cccccc;
+	text-decoration: none;
+}
+
+.separator {
+	display: inline;
+}
