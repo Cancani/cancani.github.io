@@ -46,6 +46,10 @@ iframe {
   background: #111;
 }
 
+.youtube iframe {
+  height: 315px;
+}
+
 .text {
   font-size: 10px;
   color: var(--text);
