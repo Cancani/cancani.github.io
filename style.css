@@ -4,9 +4,13 @@
   --gap: 24px;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -15,7 +19,6 @@ body {
   background-color: black;
   background-image: url("Pictures/yamei.gif");
   background-repeat: repeat;
-  background-size: auto;
 }
 
 .wrap {
@@ -36,50 +39,105 @@ body {
   background: #111;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,.35);
 }
 
 .video iframe {
   width: 100%;
   height: 100%;
   border: 0;
-  display: block;
 }
 
-.center { text-align: center; }
+.center {
+  text-align: center;
+}
 
 .embeds {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--gap);
-  align-items: start;
-  width: 100%;
 }
 
-.embed {
+.embed iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+.text {
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.pictures {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.comments {
+  margin-top: 64px;
+  max-width: 600px;
+}
+
+.comments h2 {
+  font-size: 14px;
+}
+
+#commentForm {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.embed iframe {
-  display: block;
-  width: 100%;
-  height: 300px;
-  border: 0;
+#commentForm input,
+#commentForm textarea {
   background: #111;
+  color: #ccc;
+  border: 1px solid #333;
+  padding: 8px;
+  font-family: monospace;
 }
 
-.text {
+#commentForm button {
+  background: #222;
+  color: #ccc;
+  border: 1px solid #444;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#commentForm button:hover {
+  background: #333;
+}
+
+#commentList {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+#commentList li {
+  border-bottom: 1px solid #222;
+  padding: 6px 0;
   font-size: 10px;
-  color: var(--text);
-  line-break: anywhere;
-  word-break: normal;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
 }
 
-.link { color: var(--t
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  text-align: center;
+  padding: 8px;
+  font-size: 10px;
+}
