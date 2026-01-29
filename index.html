@@ -32,8 +32,7 @@
       <div class="embed">
         <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/792489901&visual=true"></iframe>
         <p class="text">
-          <a class="link" href="https://soundcloud.com/oebeats33rd" target="_blank">oebeats</a>
-          ·
+          <a class="link" href="https://soundcloud.com/oebeats33rd" target="_blank">oebeats</a> ·
           <a class="link" href="https://soundcloud.com/oebeats33rd/narco-jungles" target="_blank">narco jungles</a>
         </p>
       </div>
@@ -41,9 +40,28 @@
       <div class="embed">
         <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/312973472&visual=true"></iframe>
         <p class="text">
-          <a class="link" href="https://soundcloud.com/jarjarjr" target="_blank">jarjarjr</a>
-          ·
+          <a class="link" href="https://soundcloud.com/jarjarjr" target="_blank">jarjarjr</a> ·
           <a class="link" href="https://soundcloud.com/jarjarjr/j0000007wav" target="_blank">J0000007.WAV</a>
+        </p>
+      </div>
+
+      <div class="embed">
+        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/714326203&visual=true"></iframe>
+        <p class="text">
+          <a class="link" href="https://soundcloud.com/cancani" target="_blank">Cancani</a> ·
+          <a class="link" href="https://soundcloud.com/cancani/the-world-is-yours-mittens-remix-1" target="_blank">
+            The World Is Yours
+          </a>
+        </p>
+      </div>
+
+      <div class="embed">
+        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/265153441&visual=true"></iframe>
+        <p class="text">
+          <a class="link" href="https://soundcloud.com/mexikodro" target="_blank">MexikoDro</a> ·
+          <a class="link" href="https://soundcloud.com/mexikodro/humble-haitian-boomerang-ft-kodak-black-prod-mexikodro" target="_blank">
+            Humble Haitian
+          </a>
         </p>
       </div>
 
@@ -54,8 +72,6 @@
         <img
           src="Pictures/small.png"
           alt="Fish"
-          width="400"
-          height="400"
           onmouseover="bigImg(this)"
           onmouseout="normalImg(this)">
       </a>
@@ -105,12 +121,12 @@
     form.addEventListener("submit", e => {
       e.preventDefault();
 
-      const name = document.getElementById("name").value;
-      const text = document.getElementById("comment").value;
+      comments.push({
+        name: name.value,
+        text: comment.value
+      });
 
-      comments.push({ name, text });
       localStorage.setItem("comments", JSON.stringify(comments));
-
       form.reset();
       renderComments();
     });
